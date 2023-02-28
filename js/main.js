@@ -73,10 +73,8 @@ function () {
             slides[activeImage].classList.add("show");
         }
 
-
         nextDom.classList.remove('hide');
 
-        
         if (activeImage == 0) {
             prevDom.classList.add('hide');
         }
