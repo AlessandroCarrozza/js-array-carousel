@@ -9,6 +9,8 @@ const imagesCarousel = [
 ];
 
 const sliderDom = document.getElementById("slider");
+const prevDom = document.getElementById("prev");
+const nextDom = document.getElementById("next");
 
 let sliderContent = "";
 
@@ -27,3 +29,16 @@ const slides = document.getElementsByClassName("image");
 
 let activeImage = 0;
 slides[0].classList.add("show");
+
+
+nextDom.addEventListener("click" , 
+
+    function () {
+        
+        if (activeImage < (slides.lenght - 1)) {
+            slides[activeImage].classList.remove("show");
+            activeImage++;
+            slides[activeImage].classList.add("show");
+        }
+
+    });
