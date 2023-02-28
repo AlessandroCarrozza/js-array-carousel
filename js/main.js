@@ -42,3 +42,18 @@ nextDom.addEventListener("click" ,
         }
 
     });
+
+
+
+
+prevDom.addEventListener("click" , 
+
+function () {
+        
+        if (activeImage > 0) {
+            slides[activeImage].classList.remove("show");
+            activeImage--;
+            slides[activeImage].classList.add("show");
+        }
+
+    });    
