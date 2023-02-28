@@ -23,10 +23,10 @@ for (let i = 0; i < imagesCarousel.length; i++) {
     sliderContent += divImage;
 }
 
+
 sliderDom.innerHTML = sliderContent;
 
 const slides = document.getElementsByClassName("image");
-
 
 
 let activeImage = 0;
@@ -38,11 +38,7 @@ nextDom.addEventListener("click" ,
     function () {
 
 
-        
-
-        
         if (activeImage < (slides.length - 1)) {
-            console.log(slides);
             slides[activeImage].classList.remove("show");
             activeImage++;
             slides[activeImage].classList.add("show");
@@ -64,8 +60,6 @@ nextDom.addEventListener("click" ,
 prevDom.addEventListener("click" , 
 
 function () {
-
-    console.log(prevDom);
         
         if (activeImage > 0) {
             slides[activeImage].classList.remove("show");
