@@ -41,6 +41,11 @@ nextDom.addEventListener("click" ,
             slides[activeImage].classList.add("show");
         }
 
+
+        if (activeImage == slides.length - 1) {
+            nextDom.classList.add('hide');
+        }
+
     });
 
 
@@ -54,6 +59,11 @@ function () {
             slides[activeImage].classList.remove("show");
             activeImage--;
             slides[activeImage].classList.add("show");
+        }
+
+
+        if (activeImage == 0) {
+            prevDom.classList.add('hide');
         }
 
     });    

@@ -71,3 +71,7 @@
 .btn.down i{
     padding-top: 5px;
 }
+
+.btn.hide{
+    display: none;
+}
