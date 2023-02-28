@@ -23,5 +23,7 @@ for (let i = 0; i < imagesCarousel.length; i++) {
 
 sliderDom.innerHTML = sliderContent;
 
+const slides = document.getElementsByClassName("image");
+
 let activeImage = 0;
-sliderDom[activeImage].classList.add('show');
+slides[0].classList.add("show");
