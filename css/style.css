@@ -43,13 +43,13 @@
 .btn{
     width: 40px;
     height: 40px;
-    background-color: red;
+    background-color: lightgray;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    /* z-index: 10000; */
+    border: 2px solid white;
 }
 
 .btn.up{

@@ -48,8 +48,8 @@ nextDom.addEventListener("click" ,
             slides[activeImage].classList.add("show");
         }
 
-       console.log(slides);
-       console.log(slides.length);
+
+        prevDom.classList.remove('hide');
 
 
         if (activeImage == slides.length - 1) {
@@ -74,6 +74,9 @@ function () {
         }
 
 
+        nextDom.classList.remove('hide');
+
+        
         if (activeImage == 0) {
             prevDom.classList.add('hide');
         }
