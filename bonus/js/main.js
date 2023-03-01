@@ -1,5 +1,5 @@
 
-// array di images
+// array delle src delle img
 const imagesCarousel = [
     "img/01.webp",
     "img/02.webp",
@@ -26,6 +26,7 @@ for (let i = 0; i < imagesCarousel.length; i++) {
 
 sliderDom.innerHTML = sliderContent;
 
+// array con tutte le img
 const slides = document.getElementsByClassName("image");
 
 
@@ -37,40 +38,34 @@ nextDom.addEventListener("click" ,
 
     function () {
 
-
-        if (activeImage < (slides.length - 1)) {
-            slides[activeImage].classList.remove("show");
+        slides[activeImage].classList.remove('show');
+     
+        if (activeImage == slides.length -1) {
+            activeImage = 0;
+        } else {
             activeImage++;
-            slides[activeImage].classList.add("show");
         }
 
-
-        prevDom.classList.remove('hide');
-
-
-        if (activeImage == slides.length - 1) {
-            nextDom.classList.add('hide');
-        }
+        slides[activeImage].classList.add('show');
 
     });
 
 
-
-
 prevDom.addEventListener("click" , 
 
-function () {
-        
-        if (activeImage > 0) {
-            slides[activeImage].classList.remove("show");
-            activeImage--;
-            slides[activeImage].classList.add("show");
-        }
+    function () {
 
-        nextDom.classList.remove('hide');
-
+        slides[activeImage].classList.remove('show');
+     
         if (activeImage == 0) {
-            prevDom.classList.add('hide');
+            activeImage = (slides.length - 1);
+        } else {
+            activeImage--;
         }
 
+        slides[activeImage].classList.add('show');
+         
     });    
+
+
+    
